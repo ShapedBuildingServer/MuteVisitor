@@ -5,11 +5,11 @@ api: [2.0.0, 3.0.0]
 author: MegaOS
 
 commands:
- mute:
-   description: Mute visitor command.
+ mutevisitor:
+   description: Mute all visitor rank command.
    permission: mv.command.mute
- unmute:
-   description: Unmute visitor command.
+ unmutevisitor:
+   description: Unmute all visitor rank command.
    permission: mv.command.unmute
 permissions:
  mv.command.mute:
