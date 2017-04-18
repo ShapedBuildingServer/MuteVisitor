@@ -1,3 +1,20 @@
 name: MuteVisitor
+main: MuteVisitor\Main
 version: 1.0
-api: 2.0.0, 3.0.0
+api: [2.0.0, 3.0.0]
+author: MegaOS
+
+commands:
+ mute:
+   description: Mute visitor command.
+   permission: mv.command.mute
+ unmute:
+   description: Unmute visitor command.
+   permission: mv.command.unmute
+permissions:
+ mv.command.mute:
+   description: Allow to use mute command.
+   default: op
+ mv.command.unmute:
+   description: Allow to use unmute command.
+   default: op
