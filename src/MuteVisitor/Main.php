@@ -23,9 +23,19 @@ class Main extends PluginBase implements Listener {
 	public function onCommand(CommandSender $sender, Command $command, $label, array $args){
 		switch($command->getName()){
 			case "mutevisitor":
-			   $name = $sender->getName();
-			   $this->mutePlayer[$name] = [];
-			   $sender->sendMessage($name . "have been mute!");
+			    if($sender->hasPermission("mv.command.mute")){
+                                   foreach($this->getServer()->getOnlinePlayers() as $p){
+					    $group = $this->getServer()->getPluginManager()->getPlugin("PurePerms")->getUserDataMgr()->getGroup($p);
+					    $groupname = $group->getName();
+					    if($groupname == "Visitor"){
+				                $this->mutedRanks->sendMessage("You're not allow to talk!");
+					    }
+				    }else{
+					$sender->sendMessage("All visitor rank have been mute!");
+					}
+			    }else{
+				$sender->sendMessage("You don't have permission to use this command!");
+				}
 			break;
 			case "unmutevisitor":
 			   $name = $sender->getName();
