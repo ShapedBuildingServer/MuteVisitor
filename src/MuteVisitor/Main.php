@@ -30,12 +30,10 @@ class Main extends PluginBase implements Listener {
 					    if($groupname == "Visitor"){
 				                $this->mutedRanks->sendMessage("You're not allow to talk!");
 					    }
-				    }else{
-					$sender->sendMessage("All visitor rank have been mute!");
-					}
+				    }
 			    }else{
 				$sender->sendMessage("You don't have permission to use this command!");
-				}
+		            }
 			break;
 			case "unmutevisitor":
 			   $name = $sender->getName();
