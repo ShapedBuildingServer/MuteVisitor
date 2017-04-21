@@ -2,7 +2,7 @@
 -------------------
 
 # To-do
-- added /mute <rank>
+- added /mute [rank]
 - fix messed up code.
 
 
